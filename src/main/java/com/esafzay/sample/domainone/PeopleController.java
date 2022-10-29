@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/orders")
+@RequestMapping("/v1/people")
 @RequiredArgsConstructor
-public class OrderController {
-    private final OrderService orderService;
+public class PeopleController {
+    private final PeopleService peopleService;
 
     @GetMapping
-    public List<OrderDto> getOrders() {
-        return orderService.getOrders();
+    public List<PeopleDto> getPeople() {
+        return peopleService.getPeople();
     }
 }
