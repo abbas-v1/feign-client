@@ -34,7 +34,7 @@ jobs:
         id: pmd
         uses: pmd/pmd-github-action@v1
         with:
-          rulesets: 'rulesets/java/quickstart.xml,ruleset.xml,category/java/bestpractices.xml,category/java/codestyle.xml'
+          rulesets: 'ruleset.xml,rulesets/internal/all-java.xml'
           sourcePath: 'src/main/java'
           analyzeModifiedFilesOnly: false
       - name: Upload SARIF file
