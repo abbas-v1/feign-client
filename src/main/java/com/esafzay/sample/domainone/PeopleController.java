@@ -12,6 +12,8 @@ import java.util.List;
 public class PeopleController {
     private final PeopleService peopleService;
 
+    private final PeopleClient peopleClient;
+
     @GetMapping
     public List<PeopleDto> getPeople() {
         return peopleService.getPeople();
