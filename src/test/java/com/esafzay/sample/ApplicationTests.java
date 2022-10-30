@@ -9,7 +9,7 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		// fail("the test is failing anyway");
+		// fail("The test is failing anyway");
 	}
 
 }
