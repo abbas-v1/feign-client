@@ -12,6 +12,9 @@ import java.util.List;
 public class PeopleController {
     private final PeopleService peopleService;
 
+    /**
+     * People client to be used
+     */
     private final PeopleClient peopleClient;
 
     @GetMapping
