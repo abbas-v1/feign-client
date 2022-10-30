@@ -14,7 +14,7 @@ public class PeopleService {
 
     public List<PeopleDto> getPeople() {
         log.info("Get people");
-        System.out.println("sd log");
+        System.out.println("some log 2");
         return peopleClient.getPeople().stream()
                 .filter(p -> p.gender() != null && p.gender().equals("Male")).toList();
     }
