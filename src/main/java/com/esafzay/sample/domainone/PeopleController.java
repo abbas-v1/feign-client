@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping("/v1/people")
 @RequiredArgsConstructor
 public class PeopleController {
-    private final PeopleService peopleService;
+    private final PeopleService PeopleService;
 
     /**
      * People client to be used
@@ -20,6 +20,6 @@ public class PeopleController {
     @GetMapping
     public List<PeopleDto> getPeople() {
         System.out.println("Some logging");
-        return peopleService.getPeople();
+        return PeopleService.getPeople();
     }
 }
