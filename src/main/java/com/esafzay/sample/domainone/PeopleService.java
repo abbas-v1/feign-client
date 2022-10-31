@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PeopleService {
 
-    private final PeopleClient peopleClient;
+        private final PeopleClient peopleClient;
 
     public List<PeopleDto> getPeople() {
         log.info("Get people");
