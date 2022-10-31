@@ -11,10 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PeopleController {
     private final PeopleService PeopleService;
-
-    /**
-     * People client to be used
-     */
+    
     private final PeopleClient peopleClient;
 
     @GetMapping
