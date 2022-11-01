@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      
     - name: Super-Linter
-      uses: github/super-linter@v4.9.7
+      uses: github/super-linter/slim@v4
