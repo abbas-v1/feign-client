@@ -6,12 +6,9 @@
 name: pmd
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: '28 1 * * 0'
+    types: [ opened, reopened, synchronize ]
 
 permissions:
   contents: read
