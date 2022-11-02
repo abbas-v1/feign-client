@@ -31,13 +31,16 @@ jobs:
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    
+    - name: Google Java Format
+      uses: axel-op/googlejavaformat-action@v3
       
-    - name: Run check style
-      uses: nikitasavinov/checkstyle-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        reporter: 'github-pr-review'
-#         tool_name: 'testtool'  
+#     - name: Run check style
+#       uses: nikitasavinov/checkstyle-action@master
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         reporter: 'github-pr-review'
+#         tool_name: 'checkstyle'  
       
 #     - name: Super-Linter
 #       uses: github/super-linter/slim@v4
