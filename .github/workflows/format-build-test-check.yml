@@ -6,7 +6,7 @@ on:
     types: [ opened, reopened, synchronize ]
 
 jobs:
-  format-build-test:
+  format-build-test-check:
 
     runs-on: ubuntu-latest
 
@@ -25,6 +25,10 @@ jobs:
     - uses: axel-op/googlejavaformat-action@v3
 
     - run: mvn -B package --file pom.xml
+
+    - uses: pmd/pmd-github-action@v1
+      with:
+        rulesets: 'ruleset.xml,category/java/bestpractices.xml,category/java/codestyle.xml,category/java/design.xml,category/java/errorprone.xml,category/java/multithreading.xml,category/java/performance.xml,category/java/security.xml'
 
 #     - name: Run check style
 #       uses: nikitasavinov/checkstyle-action@master
