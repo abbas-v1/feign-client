@@ -17,6 +17,6 @@ public class PeopleController {
   @GetMapping
   public List<PeopleDto> getPeople() {
     System.out.println("Some logging");
-    return PeopleService.getPeople();
+    return PeopleService.getPeople(); 
   }
 }
