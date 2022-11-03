@@ -26,12 +26,9 @@ jobs:
 
     - run: mvn -B package --file pom.xml
 
-    - run: pwd
-    - run: ls -lrta
-
     - uses: kemsakurai/action-pmd@master
       with:
-        rulesets_path: '$GITHUB_WORKSPACE/.github/workflows/pmd-java-rulesets.xml'
+        rulesets_path: $GITHUB_WORKSPACE/.github/workflows/pmd-java-rulesets.xml
         reporter: 'github-pr-review'
         tool_name: 'pmd-check'
 
