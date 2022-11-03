@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class PeopleService {
 
-  private final PeopleClient peopleClient;
+  private final PeopleClient pc;
 
   public List<PeopleDto> getPeople() {
     log.info("Get people");
-    return peopleClient.getPeople().stream()
+    return pc.getPeople().stream()
         .filter(p -> p.gender() != null && p.gender().equals("Male"))
         .toList();
   }

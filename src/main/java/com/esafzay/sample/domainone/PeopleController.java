@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class PeopleController {
   private final PeopleService PeopleService;
 
-  private final PeopleClient pc;
-
   @GetMapping
   public List<PeopleDto> getPeople() {
     System.out.println("Some logging");
