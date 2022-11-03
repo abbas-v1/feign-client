@@ -16,7 +16,7 @@ public class PeopleController {
 
   @GetMapping
   public List<PeopleDto> getPeople() {
-    log.debug("Get people request received");
+    log.debug("Received get-people");
     return peopleService.getPeople();
   }
 }
