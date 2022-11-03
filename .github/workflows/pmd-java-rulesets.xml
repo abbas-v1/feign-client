@@ -7,8 +7,11 @@
     <description>Every Java Rule in PMD</description>
 
     <rule ref="category/java/bestpractices.xml" />
-    <rule ref="category/java/codestyle.xml" />
+    <rule ref="category/java/codestyle.xml">
+        <exclude name="ShortVariable"/>
+    </rule>
     <rule ref="category/java/design.xml">
+        <exclude name="UseUtilityClass" />
         <exclude name="LoosePackageCoupling" />
     </rule>
     <rule ref="category/java/errorprone.xml" />
@@ -16,5 +19,17 @@
     <rule ref="category/java/performance.xml" />
     <rule ref="category/java/security.xml" />
 <!--    <rule ref="category/java/documentation.xml" />-->
+
+    <rule ref="category/java/codestyle.xml/ShortVariable">
+        <properties>
+            <property name="violationSuppressRegex" value=".*id$"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/design.xml/UseUtilityClass">
+        <properties>
+            <property name="ignoredAnnotations" value="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+        </properties>
+    </rule>
 
 </ruleset>
