@@ -1,6 +1,6 @@
 package com.esafzay.sample.domainone;
 
-final public class StringUtil {
+public final class StringUtil {
 
   private StringUtil() {
     // Not to be instantiated
