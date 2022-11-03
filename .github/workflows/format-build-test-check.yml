@@ -26,13 +26,6 @@ jobs:
 
     - run: mvn -B package --file pom.xml
 
-    - run: |
-        echo ${{ github.workspace }}
-        echo $GITHUB_WORKSPACE
-
-    - run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
-    - run: echo $GITHUB_SHA_SHORT
-
     - uses: kemsakurai/action-pmd@master
       with:
         rulesets_path: ${{ github.workspace }}/.github/workflows/pmd-java-rulesets.xml
