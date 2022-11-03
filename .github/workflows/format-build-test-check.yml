@@ -31,7 +31,7 @@ jobs:
 
     - uses: kemsakurai/action-pmd@master
       with:
-        rulesets_path: 'ruleset.xml,pmd-java-rulesets.xml'
+        rulesets_path: '/home/runner/work/feign-client/feign-client/.github/workflows/pmd-java-rulesets.xml'
         reporter: 'github-pr-review'
         tool_name: 'pmd-check'
 
