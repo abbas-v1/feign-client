@@ -26,6 +26,9 @@ jobs:
 
     - run: mvn -B package --file pom.xml
 
+    - run: pwd
+    - run: ls -lrta
+
     - uses: kemsakurai/action-pmd@master
       with:
         rulesets_path: 'ruleset.xml,pmd-java-rulesets.xml'
