@@ -28,10 +28,11 @@ jobs:
 
     - uses: kemsakurai/action-pmd@master
       with:
-        rulesets_path: ${{ github.workspace }}/.github/workflows/pmd-java-rulesets.xml
+        rulesets_path: ./.github/workflows/pmd-java-rulesets.xml
         reporter: 'github-pr-review'
         tool_name: 'pmd-check'
 
+# rulesets_path: ${{ github.workspace }}/.github/workflows/pmd-java-rulesets.xml
 #    - uses: pmd/pmd-github-action@v1
 #      with:
 #        rulesets: 'ruleset.xml,category/java/bestpractices.xml,category/java/codestyle.xml,category/java/design.xml,category/java/errorprone.xml,category/java/multithreading.xml,category/java/performance.xml,category/java/security.xml'
