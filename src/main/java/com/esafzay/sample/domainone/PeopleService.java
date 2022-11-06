@@ -13,7 +13,7 @@ public class PeopleService {
   private final PeopleClient peopleClient;
 
   public List<PeopleDto> getPeople() {
-    log.info("Get people from client");
+    log.info("Get people from feign client");
     return peopleClient.getPeople().stream()
         .filter(p -> p.gender() != null && p.gender().equals("Male"))
         .toList();
