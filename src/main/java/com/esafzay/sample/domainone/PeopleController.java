@@ -1,6 +1,5 @@
 package com.esafzay.sample.domainone;
 
-import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
