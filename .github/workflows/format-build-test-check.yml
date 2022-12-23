@@ -22,7 +22,11 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - uses: axel-op/googlejavaformat-action@v3
+    - uses: nikitasavinov/checkstyle-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-pr-review'
+        tool_name: 'google-checks'
 
     - run: mvn -B package --file pom.xml
 
@@ -30,7 +34,7 @@ jobs:
       with:
         rulesets_path: ./.github/workflows/pmd-java-rulesets.xml
         reporter: 'github-pr-review'
-        tool_name: 'pmd-check'
+        tool_name: 'pmd-checks'
 
 #    - uses: pmd/pmd-github-action@v1
 #      with:
