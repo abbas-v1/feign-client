@@ -22,10 +22,17 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    - uses: nikitasavinov/checkstyle-action@master
+    - name: Run check style
+      uses: nikitasavinov/checkstyle-action@master
       with:
-        reporter: 'github-pr-review'
-        tool_name: 'google-checks'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-pr-check'
+        tool_name: 'testtool'
+
+#    - uses: nikitasavinov/checkstyle-action@master
+#      with:
+#        reporter: 'github-pr-review'
+#        tool_name: 'google-checks'
 
     - uses: kemsakurai/action-pmd@master
       with:
