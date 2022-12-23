@@ -24,31 +24,15 @@ jobs:
 
     - uses: nikitasavinov/checkstyle-action@master
       with:
+        filter_mode: diff_context
         reporter: 'github-pr-review'
         tool_name: 'google-checks'
 
     - uses: kemsakurai/action-pmd@master
       with:
         rulesets_path: ./.github/workflows/pmd-java-rulesets.xml
+        filter_mode: diff_context
         reporter: 'github-pr-review'
         tool_name: 'pmd-checks'
 
     - run: mvn -B package --file pom.xml
-
-#    - uses: pmd/pmd-github-action@v1
-#      with:
-#        rulesets: ./.github/workflows/pmd-java-rulesets.xml
-#
-#     - name: Run check style
-#       uses: nikitasavinov/checkstyle-action@master
-#       with:
-#         github_token: ${{ secrets.GITHUB_TOKEN }}
-#         reporter: 'github-pr-review'
-#         tool_name: 'checkstyle'
-#
-#     - name: Super-Linter
-#       uses: github/super-linter/slim@v4
-#       env:
-#           DEFAULT_BRANCH: main
-#           VALIDATE_ALL_CODEBASE: false
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
