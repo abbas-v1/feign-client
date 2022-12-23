@@ -4,7 +4,6 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @Slf4j
 public class PeopleController {
-  private final PeopleService PeopleService;
+  private final PeopleService peopleService;
 
   @GetMapping
   public List<PeopleDto> getPeople() {
     log.debug("Received get-people");
-    return PeopleService.getPeople();
+    return peopleService.getPeople();
   }
 }
