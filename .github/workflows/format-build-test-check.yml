@@ -34,11 +34,11 @@ jobs:
 #        reporter: 'github-pr-review'
 #        tool_name: 'google-checks'
 
-    - uses: kemsakurai/action-pmd@master
-      with:
-        rulesets_path: ./.github/workflows/pmd-java-rulesets.xml
-        reporter: 'github-pr-review'
-        tool_name: 'pmd-checks'
+#    - uses: kemsakurai/action-pmd@master
+#      with:
+#        rulesets_path: ./.github/workflows/pmd-java-rulesets.xml
+#        reporter: 'github-pr-review'
+#        tool_name: 'pmd-checks'
 
     - run: mvn -B package --file pom.xml
 
