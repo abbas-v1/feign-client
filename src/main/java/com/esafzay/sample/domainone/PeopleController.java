@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @Slf4j
 public class PeopleController {
-  private final PeopleService peopleService;
+  private final PeopleService PeopleService;
 
   @GetMapping
   public List<PeopleDto> getPeople() {
     log.debug("Received get-people");
-    return peopleService.getPeople();
+    return PeopleService.getPeople();
   }
 }
