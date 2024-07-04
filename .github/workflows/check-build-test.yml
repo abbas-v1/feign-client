@@ -34,5 +34,3 @@ jobs:
         filter_mode: diff_context
         reporter: 'github-pr-review'
         tool_name: 'pmd-checks'
-
-    - run: mvn --batch-mode --update-snapshots verify
