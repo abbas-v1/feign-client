@@ -35,4 +35,4 @@ jobs:
         reporter: 'github-pr-review'
         tool_name: 'pmd-checks'
 
-    - run: mvn -B package --file pom.xml
+    - run: mvn --batch-mode --update-snapshots verify
