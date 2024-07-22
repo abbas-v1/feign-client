@@ -6,6 +6,9 @@
 version: 2
 updates:
   - package-ecosystem: "maven" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    directories:
+      - "/"
+      - "/feign-client"
+      - "/feign-client/"
     schedule:
       interval: "weekly"
